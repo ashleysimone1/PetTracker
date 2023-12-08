@@ -1,5 +1,4 @@
-// REMEMBER: up and down are functions that MUST return promises
-// You'll probably want to delete this file, it just has some examples to copy if you need
+// You'l probably want to delete this file, it just has some examples to copy if you need
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
