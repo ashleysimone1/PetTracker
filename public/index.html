@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Tracker</title>
+    <script src="index.js" defer></script>
+    <style>
+        img { height: 15rem; }
+        sup { color: red; }
+        form, ul { display: flex; gap: 1rem; padding: 1rem; border: 0.1rem solid #000; }
+        form { flex-direction: column; width: fit-content; }
+        #pet-list { flex-wrap: wrap; list-style: none; }
+      </style>
+</head>
+<body>
+    <h1>Pet Tracker</h1>
+    <form>
+        <div>
+            <label for="pet-name">Pet Name:</label>
+            <input type="text" name="petName" id="pet-name" required>
+        </div>
+
+        <div>
+            <label for = "pet-picture">Pet Picture:</label>
+            <input type="text" name="petPicture" id="pet-picture" placeholder="Picture URL"required>
+        </div>
+        
+        <fieldset>
+            <legend>Species</legend>
+            <input type="radio" name="petSpecies" id="dog" value="dog" required>
+            <label for="dog">Dog</label>
+            <input type="radio" name="petSpecies" id="cat" value="cat">
+            <label for="cat">Cat</label>
+            <input type="radio" name="petSpecies" id="bird" value="bird">
+            <label for="bird">Bird</label>
+        </fieldset>
+
+        <div>
+            <input type="checkbox" name="friendly" id="friendly" required> 
+            <label for="friendly">Are you friendly?</label>
+        </div>
+
+        <button type="submit">Add Pet!</button>
+        
+    </form>
+</body>
+</html>

@@ -5,12 +5,12 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-    return knex.schema.createTable('example_resources', (table) => {
-      table.increments(); // this is the id
-      table.string('title'); // text
-      table.integer('priority'); // integer
-      table.boolean('is_done').defaultTo(false); // boolean, optional default
-  
+    return knex.schema.createTable('pets', (table) => {
+      table.increments('pet_id'); // this is the id
+      table.string('pet_name')
+      table.string('pet_picture');
+      table.string('pet_species');
+      table.boolean('is_friendly').defaultTo(false);
       /* add a foreign key that links to a hypothetical users table */
       // You must first have created a users table with a key called id!
       // table.integer('user_id').index().references('id').inTable('users');
