@@ -17,7 +17,7 @@ class Pets {
     try {
       const query = `INSERT INTO pets (pet_name, pet_picture, pet_species, is_friendly)
       values (?, ?, ?, ?)
-      returning *`;
+      RETURNING *`;
       const { rows: [newPet] } = await knex.raw(query, [pet_name, pet_picture, pet_species, is_friendly]);
       return newPet;
     } catch (err) {
