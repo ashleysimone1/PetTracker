@@ -10,11 +10,11 @@ const createPetCard = (obj) => {
     section.appendChild(h2);
 
     const img = document.createElement('img');
-    img.src = obj.petPicture;
+    img.src = `Name:`, obj.petPicture;
     section.appendChild(img);
 
     const petSpecies = document.createElement('h3');
-    petSpecies.innerText = obj.petSpecies;
+    petSpecies.innerText = `Species:`, obj.petSpecies;
     section.appendChild(petSpecies);
 
     const isFriendly = document.createElement('h4');
