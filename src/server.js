@@ -7,22 +7,22 @@ const Pets  = require('./db/models/pets')
 
 const publicDir = path.join(__dirname, '..', 'public');
 
-const staticAssets = express.static(publicDir);
+const staticAssets = express.static(publicDir)
 app.use(staticAssets);
 
 app.get('/allPets', async (req, res) => {
     const petList = await Pets.list()
-    console.log(petList);
-    res.send(petList);
+    console.log(petList)
+    res.send(petList)
 });
 
 app.post('/api', async (req, res) => {
-    console.log(req.body);
-    const { friendly, petName, petPicture, petSpecies } = req.body;
-    const newPet = await Pets.create(req.body);
-    res.send()
+    const { friendly, petName, petPicture, petSpecies } = req.body
+    const newPet = await Pets.create(petName, petPicture, petSpecies, friendly)
+    console.log(newPet)
+    res.send(newPet)
 })
 
 app.listen(PORT, () => {
-    console.log(`listening on port on http://localhost:${PORT}`);
+    console.log(`listening on port on http://localhost:${PORT}`)
 })
