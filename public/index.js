@@ -30,7 +30,7 @@ const createPetCard = (obj) => {
 const handleSubmit = (e) => {
     e.preventDefault();
     const petObj = Object.fromEntries(new FormData(e.target));
-    petObj.friendly = petObj.friendly === "on";
+    petObj.friendly?petObj.friendly = 'Friendly!':petObj.friendly = 'Watch out!';
     console.log(petObj);
 
     fetch('/api', {
