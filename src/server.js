@@ -21,8 +21,10 @@ app.post('/api', async (req, res) => {
     const newPet = await Pets.create(petName, petPicture, petSpecies, friendly)
     console.log(newPet)
     res.send(newPet)
-})
+});
 
 app.listen(PORT, () => {
     console.log(`listening on port on http://localhost:${PORT}`)
 })
+
+
